@@ -22,3 +22,11 @@ def updateBtns(buttons: list[Button], idx: int, default_color: Tuple[int, int, i
         else:
             button.setColor(default_color)
         button.update()
+
+def isCollided(rectA: pg.Rect, rectB: pg.Rect):
+    if abs(rectA.centerx - rectB.centerx) > (rectA.width / 2 + rectB.width / 2):
+        return 0
+    if abs(rectA.centery - rectB.centery) > (rectA.height / 2 + rectB.height / 2):
+        return 0
+    
+    return 1
