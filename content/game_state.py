@@ -7,7 +7,7 @@ SCREEN_HEIGHT = pg.display.set_mode().get_size()[1] - 100
 SCREEN = pg.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 ## BACKGROUND ##
-BG = pg.image.load(os.path.join("content", "assets", "bg", "space.jpg"))
+BG = pg.image.load(os.path.join("content", "assets", "bg", "space.jpg")).convert_alpha()
 BG.set_alpha(100)
 BG = pg.transform.scale(BG, (SCREEN_HEIGHT, SCREEN_WIDTH))
 BG = pg.transform.rotate(BG, 90)
